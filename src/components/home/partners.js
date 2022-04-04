@@ -9,12 +9,6 @@ const data = [
     title: 'Amazone',
     content: [
       {
-        price: '£29.99',
-        space: '1 GB of space',
-        user: '1 user',
-        support: '24/7 support',
-        backup: 'Safe, reliable backup',
-        access: 'Access from anywhere',
         image: image
       }
     ]
@@ -23,12 +17,6 @@ const data = [
     title: 'Microsoft',
     content: [
       {
-        price: '£59.99',
-        space: '5 GB of space',
-        user: '5 users',
-        support: '24/7 support',
-        backup: 'Safe, reliable backup',
-        access: 'Access from anywhere',
         image: image
 
       }
@@ -38,19 +26,13 @@ const data = [
     title: 'Google',
     content: [
       {
-        price: '£99.99',
-        space: 'Unlimited space',
-        user: '15 users',
-        support: '24/7 support',
-        backup: 'Safe, reliable backup',
-        access: 'Access from anywhere',
         image: image
       }
     ]
   }
 ];
 
-function AppPricing() {
+function AppPartners() {
   return (
     <div id="pricing" className="block pricingBlock bgGray">
       <div className="container-fluid">
@@ -83,4 +65,4 @@ function AppPricing() {
   );
 }
 
-export default AppPricing;
+export default AppPartners;
