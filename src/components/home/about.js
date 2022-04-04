@@ -11,13 +11,13 @@ const items = [
   },
   {
     key: '2',
-    icon: <i className="fas fa-desktop"></i>,
+    icon: <i className="fas fa-chart-pie"></i>,
     title: 'Influenceur',
     content: 'xxxxxxxxxxxxxxxxxxxxxxxxxxnt. xxxxxxxxxxxxxxxxxxxxxxxxxxnt. His ex mandamus.',
   },
   {
     key: '3',
-    icon: <i className="fas fa-database"></i>,
+    icon: <i className="fas fa-chart-pie"></i>,
     title: 'Infleunceur',
     content: 'xxxxxxxxxxxxxxxxxxxxxxxxxxnt. xxxxxxxxxxxxxxxxxxxxxxxxxxnt',
   },

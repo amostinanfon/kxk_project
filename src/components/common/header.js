@@ -21,7 +21,7 @@ function AppHeader() {
     <div className="container-fluid">
       <div className="header">
         <div className="logo">
-          <div className="fas fa-bolt"></div>
+          <div className="fa fa-anchor" aria-hidden="true"></div>
           <a href="http://google.com" target='_blank' rel='noopener noreferrer'>
           </a>
           <Image src={image3} alt=""/>
