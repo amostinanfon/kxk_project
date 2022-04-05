@@ -18,13 +18,13 @@ import { Row, Col } from 'antd';
 import { Card } from 'antd';
 const { Meta } = Card;
 
-function AppFeature() {
+function AppInfluenceurs() {
   return (
     <div id="feature" className="block featureBlock bgGray">
       <div className="container-fluid">
         <div className="titleHolder">
           <h2>KXK AGENCY</h2>
-          <p>Lorem</p>
+          <p>Lorem dddddddddddddddddddd</p>
         </div>
         <Row gutter={[16, 16]}>
           <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
@@ -81,4 +81,4 @@ function AppFeature() {
   );
 }
 
-export default AppFeature;
+export default AppInfluenceurs;
