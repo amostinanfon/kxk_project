@@ -69,6 +69,10 @@ const postDataHandler = (e) => {
 }
 
 
+const resetDataHandler = () => {
+ const name = ''
+
+}
 
   const sendEmail = (e) => {
 
@@ -174,10 +178,21 @@ const postDataHandler = (e) => {
                 type="primary" 
                 htmlType="submit" 
                 className="login-form-button"
-                on
             >
               Envoyez !!!
             </Button>
+
+          </Form.Item>
+          <Form.Item>
+            <Button 
+                onClick= {''}
+                type="primary" 
+                htmlType="submit" 
+                className="login-form-button"
+            >
+              Reset !!!
+            </Button>
+            
           </Form.Item>
         </Form>
       </div>
