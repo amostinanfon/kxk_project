@@ -9,7 +9,7 @@ function AppFooter() {
     <div className="container-fluid">
       <div className="footer">
         <div className="logo">
-          <i className="fas fa-bolt"></i>
+          <i className="fa fa-anchor"></i>
           <a href="http://google.com">
             <Image src={image}/>
           </a>

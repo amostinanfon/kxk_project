@@ -34,7 +34,7 @@ const data = [
 
 function AppPartners() {
   return (
-    <div id="pricing" className="block pricingBlock bgGray">
+    <div id="partner" className="block partnerBlock bgGray">
       <div className="container-fluid">
         <div className="titleHolder">
           <h2>Partenaires</h2>
