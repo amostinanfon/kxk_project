@@ -1,7 +1,7 @@
 {
   "name": "tech",
   "version": "0.1.0",
-  "homepage": "http://bibekshakya.com/demo/react/antdesign/tech",
+  "homepage": "http://localhost:3000/kxk",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.4.3",
@@ -33,8 +33,8 @@
       "not op_mini all"
     ],
     "development": [
+      "last 1 firefoxversion",
       "last 1 chrome version",
-      "last 1 firefox version",
       "last 1 safari version"
     ]
   }

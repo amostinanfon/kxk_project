@@ -178,6 +178,9 @@ const postDataHandler = (e) => {
             >
               Envoyez !!!
             </Button>
+            <Button type="primary" onClick={this.reset}>
+               reset
+            </Button>
           </Form.Item>
         </Form>
       </div>
