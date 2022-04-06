@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 //import instance from '../../firebase/instance';
 
 
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button, Checkbox , message } from 'antd';
 import axios from 'axios';
 
 
@@ -21,6 +21,13 @@ function AppContact() {
     form.resetFields()
   }
 
+  const info = () => {
+    message.info('message envoyé !!!')
+  }
+
+  const tailLayout = {
+    wrapperCol: { offset: 8, span: 16 },
+  };
 
 
 let [name , setName] = useState('')
@@ -132,6 +139,7 @@ const postDataHandler = (e) => {
                 message: 'Entrer votre nom et prenom' 
               }]
             }
+            hasFeedback
           >
             <Input  value={name} onChange={handleName} placeholder="Nom et Prenom" />
           </Form.Item>
@@ -147,11 +155,19 @@ const postDataHandler = (e) => {
                 message: 'Entrez votre Adresse Email ICI !',
               },
             ]}
+            hasFeedback
           >
             <Input value={email} onChange={handleEmail} placeholder="Adresse Email "/>
           </Form.Item>
           <Form.Item
             name="telephone"
+            rules={[
+              {
+                required: true,
+                message: "Entrer votre numéro de téléphone"
+              }
+            ]}
+            hasFeedback
           >
             <Input  value={telephone} onChange={handleTelephone} placeholder="Téléphone" />
           </Form.Item>
@@ -177,20 +193,19 @@ const postDataHandler = (e) => {
               <Checkbox>J'accepte les conditions d'utilisation.</Checkbox>
             </Form.Item>
           </Form.Item>
-          <Form.Item>
-            <Button 
+          <Form.Item {...tailLayout}>
+            <Button
+                //onFinish={success}
                 onClick={postDataHandler}  
+                //onSubmit={onReset}
                 type="primary" 
                 htmlType="submit" 
                 className="login-form-button"
             >
               Envoyez !!!
             </Button>
-
-          </Form.Item>
-          <Form.Item>
-            <Button htmlType="button" onClick={onReset} type="primary">
-              Reset !!!
+            <Button htmlType="button" onClick={info}>
+              Effacer 🤨
             </Button> 
           </Form.Item>
         </Form>
