@@ -1,4 +1,4 @@
-import React , { useRef, useState } from 'react';
+import React , {  useState } from 'react';
 import emailjs from '@emailjs/browser';
 //import instance from '../../firebase/instance';
 
@@ -13,15 +13,21 @@ const { TextArea } = Input;
 
 function AppContact() {
 
-  const form = useRef();
+  //const form = useRef()
+  
+  const [form] = Form.useForm();
+  
+  const onReset = () => {
+    form.resetFields()
+  }
 
 
 
-const [name , setName] = useState('')
-const [email , setEmail] = useState('')
-const [telephone , setTelephone] = useState('')
-const [sujet , setSujet] = useState('')
-const [message , setMessage] = useState('')
+let [name , setName] = useState('')
+let [email , setEmail] = useState('')
+let [telephone , setTelephone] = useState('')
+let [sujet , setSujet] = useState('')
+let [message , setMessage] = useState('')
 //const [date , setDate] = useState('')
 
 
@@ -48,6 +54,10 @@ const handleSujet = (e) => {
 
 }*/
 
+
+
+
+
 const handleMessage = (e) => {
   setMessage(e.target.value)
   console.log(message)
@@ -68,11 +78,6 @@ const postDataHandler = (e) => {
         .then(response => console.log(response))
 }
 
-
-const resetDataHandler = () => {
- const name = ''
-
-}
 
   const sendEmail = (e) => {
 
@@ -116,7 +121,7 @@ const resetDataHandler = () => {
           name="normal_login"
           className="login-form"
           initialValues={{ remember: true }}
-          ref={form} 
+          form={form} 
           onFinish = {(values) => sendEmail({values})}
         >
           <Form.Item
@@ -184,15 +189,9 @@ const resetDataHandler = () => {
 
           </Form.Item>
           <Form.Item>
-            <Button 
-                onClick= {''}
-                type="primary" 
-                htmlType="submit" 
-                className="login-form-button"
-            >
+            <Button htmlType="button" onClick={onReset} type="primary">
               Reset !!!
-            </Button>
-            
+            </Button> 
           </Form.Item>
         </Form>
       </div>
