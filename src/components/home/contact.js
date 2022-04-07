@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 //import instance from '../../firebase/instance';
 
 
-import { Form, Input, Button, Checkbox , message } from 'antd';
+import { Form, Input, Button, Checkbox } from 'antd';
 import axios from 'axios';
 
 
@@ -21,10 +21,6 @@ function AppContact() {
     form.resetFields()
   }
 
-  const info = () => {
-    message.info('message envoyé !!!')
-  }
-
   const tailLayout = {
     wrapperCol: { offset: 8, span: 16 },
   };
@@ -32,10 +28,9 @@ function AppContact() {
 
 let [name , setName] = useState('')
 let [email , setEmail] = useState('')
-let [telephone , setTelephone] = useState('')
+let [instagram , setInstagram] = useState('')
 let [sujet , setSujet] = useState('')
 let [message , setMessage] = useState('')
-//const [date , setDate] = useState('')
 
 
 const handleName = (e) => {
@@ -55,15 +50,6 @@ const handleSujet = (e) => {
 
 }
 
-/*const handleDate = (e) => {
-  setDate(e.target.value)
-  console.log(date)
-
-}*/
-
-
-
-
 
 const handleMessage = (e) => {
   setMessage(e.target.value)
@@ -71,9 +57,9 @@ const handleMessage = (e) => {
 
 }
 
-const handleTelephone = (e) => {
-  setTelephone(e.target.value)
-  console.log(telephone)
+const handleInstagram = (e) => {
+  setInstagram(e.target.value)
+  console.log(instagram)
 
 }
 
@@ -81,7 +67,7 @@ const handleTelephone = (e) => {
 const postDataHandler = (e) => {
   //e.preventDefault();
   axios.post('https://kxk-projet-default-rtdb.firebaseio.com/data.json', 
-        {name , email , telephone , sujet , message})
+        {name , email , instagram , sujet , message})
         .then(response => console.log(response))
 }
 
@@ -92,7 +78,7 @@ const postDataHandler = (e) => {
     //e.preventDefault();
 
       emailjs.send('service_l8pcfwe', 'template_wr9q418' , 
-                  {name, telephone, email, sujet, message }, 
+                  {name, instagram, email, sujet, message }, 
                   'n3T_AxpcfCqmusW6y')
              .then((response) => {
              console.log('SUCCESS!!!', response.status, response.text);
@@ -127,9 +113,9 @@ const postDataHandler = (e) => {
           autoComplete='off'
           name="normal_login"
           className="login-form"
+          form={form}
           initialValues={{ remember: true }}
-          form={form} 
-          onFinish = {(values) => sendEmail({values})}
+          onFinish = { (values) => sendEmail({values}) }
         >
           <Form.Item
             name="name"
@@ -169,7 +155,7 @@ const postDataHandler = (e) => {
             ]}
             hasFeedback
           >
-            <Input  value={telephone} onChange={handleTelephone} placeholder="Téléphone" />
+            <Input  value={instagram} onChange={handleInstagram} placeholder="Compte Instagram" />
           </Form.Item>
           <Form.Item
             name="sujet"
@@ -196,15 +182,14 @@ const postDataHandler = (e) => {
           <Form.Item {...tailLayout}>
             <Button
                 //onFinish={success}
-                onClick={postDataHandler}  
-                //onSubmit={onReset}
+                onClick={postDataHandler && onReset}  
                 type="primary" 
                 htmlType="submit" 
                 className="login-form-button"
             >
               Envoyez !!!
             </Button>
-            <Button htmlType="button" onClick={info}>
+            <Button htmlType="button" onClick={onReset}>
               Effacer 🤨
             </Button> 
           </Form.Item>
