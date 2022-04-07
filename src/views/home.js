@@ -4,7 +4,7 @@ import AppHero from '../components/home/hero';
 import AppAbout from '../components/home/about';
 import AppInfluenceurs from '../components/home/influenceurs';
 import AppContact from '../components/home/contact';
-import AppPartners from '../components/home/partners';
+import AppPartenaires from '../components/home/partenaires';
 
 
 
@@ -15,7 +15,7 @@ function AppHome() {
       <AppHero/>
       <AppAbout/>
       <AppInfluenceurs/>
-      <AppPartners/>
+      <AppPartenaires/>
       <AppContact/>
     </div>
   );
