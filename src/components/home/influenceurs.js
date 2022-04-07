@@ -20,7 +20,7 @@ const { Meta } = Card;
 
 function AppInfluenceurs() {
   return (
-    <div id="influenceur" className="block influenceurBlock bgGray">
+    <div id="influenceurs" className="block influenceurBlock bgGray">
       <div className="container-fluid">
         <div className="titleHolder">
           <h2>KXK AGENCY</h2>

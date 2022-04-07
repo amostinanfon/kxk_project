@@ -27,8 +27,8 @@ function AppHeader() {
           <Anchor targetOffset="65">
             <Link href="#hero" title="Accueil" />
             <Link href="#about" title="Qui sommes-nous" />
-            <Link href="#feature" title="Influenceurs" />
-            <Link href="#pricing" title="Partenaires" />
+            <Link href="#influenceurs" title="Influenceurs" />
+            <Link href="#partenaires" title="Partenaires" />
             <Link href="#contact" title="Contact" />
           </Anchor>
         </div>
@@ -45,8 +45,8 @@ function AppHeader() {
             <Anchor targetOffset="65">
               <Link href="#hero" title="Accueil" />
               <Link href="#about" title="Qui sommes-nous" />
-              <Link href="#feature" title="Services" />
-              <Link href="#works" title="Partenaires" />
+              <Link href="#infleunceurs" title="influenceurs" />
+              <Link href="#partenaires" title="Partenaires" />
               <Link href="#contact" title="Contact" />
             </Anchor>
           </Drawer>
