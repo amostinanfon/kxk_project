@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 /*import image1 from '../../assets/images/modern-design.jpg';
 import image2 from '../../assets/images/clean-design.jpg';
@@ -28,12 +29,14 @@ function AppInfluenceurs() {
         </div>
         <Row gutter={[16, 16]}>
           <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-            <Card
-              hoverable
-              cover={<img alt="Modern Design" src={image1} height='430'/>}
-            >
-              <Meta title="dddddddddddddddddddd" />
-            </Card>
+            <Link to="/contact" target='_blank'>
+              <Card
+                hoverable
+                cover={<img alt="Modern Design" src={image1} height='430'/>}
+              >
+                <Meta title="dddddddddddddddddddd" />
+              </Card>
+            </Link>
           </Col>
           <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
             <Card
