@@ -4,7 +4,10 @@ import AppHero from '../components/home/hero';
 import AppAbout from '../components/home/about';
 import AppInfluenceurs from '../components/home/influenceurs';
 import AppContact from '../components/home/contact';
-import AppPartners from '../components/home/partners';
+import AppPartenaires from '../components/home/partenaires';
+import AppHeader from "../components/common/header";
+import AppFooter from "../components/common/footer";
+ 
 
 
 
@@ -12,11 +15,13 @@ import AppPartners from '../components/home/partners';
 function AppHome() {
   return (
     <div className="main">
+      <AppHeader/>
       <AppHero/>
       <AppAbout/>
       <AppInfluenceurs/>
-      <AppPartners/>
+      <AppPartenaires/>
       <AppContact/>
+      <AppFooter/>
     </div>
   );
 }

@@ -32,7 +32,7 @@ const data = [
   }
 ];
 
-function AppPartners() {
+function AppPartenaires() {
   return (
     <div id="partenaires" className="block partnerBlock bgGray">
       <div className="container-fluid">
@@ -65,4 +65,4 @@ function AppPartners() {
   );
 }
 
-export default AppPartners;
+export default AppPartenaires;

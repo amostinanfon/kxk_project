@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 //import instance from '../../firebase/instance';
 
 
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button, Checkbox  } from 'antd';
 import axios from 'axios';
 
 
@@ -68,7 +68,8 @@ const postDataHandler = (e) => {
   //e.preventDefault();
   axios.post('https://kxk-projet-default-rtdb.firebaseio.com/data.json', 
         {name , email , instagram , sujet , message})
-        .then(response => console.log(response))
+        .then(response => console.log(response));
+
 }
 
 
@@ -85,6 +86,8 @@ const postDataHandler = (e) => {
             }, (error) => {
                 console.log(error.text);
         });
+
+        form.resetFields();
     }
 
     /**useEffect(() => {
@@ -182,7 +185,8 @@ const postDataHandler = (e) => {
           <Form.Item {...tailLayout}>
             <Button
                 //onFinish={success}
-                onClick={postDataHandler && onReset}  
+                //onFinish={postDataHandler && onReset }
+                onClick={ postDataHandler }
                 type="primary" 
                 htmlType="submit" 
                 className="login-form-button"
@@ -191,7 +195,7 @@ const postDataHandler = (e) => {
             </Button>
             <Button htmlType="button" onClick={onReset}>
               Effacer 🤨
-            </Button> 
+            </Button>
           </Form.Item>
         </Form>
       </div>
