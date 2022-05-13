@@ -1,13 +1,17 @@
 import React from 'react';
 
-import { BackTop , Image} from 'antd';
+import { BackTop , Image , Anchor} from 'antd';
 import image from '../../assets/images/kxk.jpg'
 
+const { Link } = Anchor ;
 
 function AppFooter() {
   return (
     <div className="container-fluid">
       <div className="footer">
+        <Anchor>
+          <Link to="#influenceurs"/>
+        </Anchor>
         <div className="logo">
             <Image src={image}/>
         </div>

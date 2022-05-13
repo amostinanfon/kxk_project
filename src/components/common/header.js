@@ -26,10 +26,10 @@ function AppHeader() {
         <div className="mobileHidden">
           <Anchor targetOffset="65">
             <Link href="#hero" title="Accueil"/>
-            <Link href="#about" title="Qui sommes-nous" target="_blank"/>
-            <Link href="#influenceurs" title="Influenceurs" target="_blank"/>
-            <Link href="#partenaires" title="Partenaires" target="_blank"/>
-            <Link href="#contact" title="Contact" />
+            <Link href="#about" title="Qui sommes-nous"/>
+            <Link href="#influenceurs" title="Influenceurs"/>
+            <Link href="#partenaires" title="Partenaires"/>
+            <Link href="#contact" title="Contact"/>
           </Anchor>
         </div>
         <div className="mobileVisible">

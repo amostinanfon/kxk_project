@@ -1,6 +1,6 @@
 import React from 'react';
-import { Anchor} from 'antd';
-import { Carousel  } from 'antd';
+//import { Redirect } from 'react-router-dom';
+//import { Anchor} from 'antd';
 
 
 import image1 from '../../assets/images/photo23.jpg';
@@ -13,27 +13,15 @@ import { Card } from 'antd';
 const { Meta } = Card;
 
 
-const items = [
-    {
-      key: '1',
-      title: 'With K will be ok',
-      content: 'An vim odio ocurreret consetetur, justo constituto ex mea. Quidam facilisis vituperata pri ne. Id nostrud gubergren urbanitas sed, quo summo animal qualisque ut, cu nostro dissentias consectetuer mel. Ut admodum conceptam mei, cu eam tation fabulas abhorreant. His ex mandamus.',
-    },
-    {
-      key: '2',
-      title: 'With K will be ok',
-      content: 'An vim odio ocurreret consetetur, justo constituto ex mea. Quidam facilisis vituperata pri ne. Id nostrud gubergren urbanitas sed, quo summo animal qualisque ut, cu nostro dissentias consectetuer mel. Ut admodum conceptam mei, cu eam tation fabulas abhorreant. His ex mandamus.',
-    },
-    {
-      key: '3',
-      title: 'With K will be ok',
-      content: 'An vim odio ocurreret consetetur, justo constituto ex mea. Quidam facilisis vituperata pri ne. Id nostrud gubergren urbanitas sed, quo summo animal qualisque ut, cu nostro dissentias consectetuer mel. Ut admodum conceptam mei, cu eam tation fabulas abhorreant. His ex mandamus.',
-    },
-  ]
-
-const { Link } = Anchor;
 
 function AppInfluenceurs() {
+
+ //let navigate = useNavigate();
+
+  const handleClick = () => {
+    console.log("Youpiiiiii");
+  }
+   
   return (
     <div id="influenceurs" className="block influenceurBlock bgGray">
       <div className="container-fluid">
@@ -44,13 +32,11 @@ function AppInfluenceurs() {
         <Row gutter={[16, 16]}>
           <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
             <Card
-              hoverable
-              cover={<img alt="Modern Design" src={image1} height='430'/>}
-            >
-              {/* <Meta title="dddddddddddddddddddd" /> */}
-              <Anchor>
-                <Link href={'#message'} target='_blank' title="dddddddddddddddddddd"/>
-              </Anchor>
+                  hoverable
+                  cover={<img alt="Modern Design" src={image1} height='430'/>}
+                  onClick={handleClick}
+                >
+                <Meta title="dddddddddddddddddddd" />
             </Card>
           </Col>
           <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
@@ -69,20 +55,33 @@ function AppInfluenceurs() {
               <Meta title="yyyyyyyyyyyyyyyyyyyyyy" />
             </Card>
           </Col>
-          <div id="hero" className="heroBlock">
-            <Carousel>
-                {items.map(item => {
-                return (
-                    <div key={item.key} className="container-fluid">
-                        <div className="content">
-                            <h3>{item.title}</h3>
-                            <p>{item.content}</p>
-                        </div>
-                    </div>  
-                );
-                })}
-            </Carousel>
-        </div>
+        </Row>
+        <Row gutter={[16, 16]}>
+          <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
+            <Card
+                  hoverable
+                  cover={<img alt="Modern Design" src={image1} height='430'/>}
+                  id="a"
+                >
+                <Meta title="dddddddddddddddddddd" />
+            </Card>
+          </Col>
+          <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
+            <Card
+              hoverable
+              cover={<img alt="Test" src={image2} height='430' />}
+            >
+              <Meta title="xxxxxxxxxxxxxxxxxxxx" />
+            </Card>
+          </Col>
+          <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
+            <Card
+              hoverable
+              cover={<img alt="Test" src={image3} height='430'/>}
+            >
+              <Meta title="yyyyyyyyyyyyyyyyyyyyyy" />
+            </Card>
+          </Col>
         </Row>
       </div>
     </div>
