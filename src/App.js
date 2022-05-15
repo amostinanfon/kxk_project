@@ -20,7 +20,7 @@ import AppFirst from './components/redirect/first';
 import { Layout } from 'antd';
 
 //import { Layout } from 'antd';
-const { Header, Footer } = Layout;
+const { Header, Content , Footer } = Layout;
 
 
 
@@ -32,6 +32,7 @@ function App() {
             <Header>
               <AppHeader/>
             </Header>
+            <Content>
               <Routes>
                 <Route path='/' element={<AppHome/>}/>
                 <Route path='/first' element={<AppFirst/>}/>
@@ -41,6 +42,7 @@ function App() {
                 <Route path='/about' element={<AppAbout/>}/>
                 <Route path='/partenaires' element={<AppPartenaires/>}/>
               </Routes>
+            </Content>
             <Footer>
               <AppFooter/>  
             </Footer>
