@@ -16,11 +16,11 @@ import AppAbout from './components/home/about';
 import AppInfluenceurs from './components/home/influenceurs';
 import AppContact from './components/home/contact';
 import AppPartenaires from './components/home/partenaires';
+import AppFirst from './components/redirect/first';
 import { Layout } from 'antd';
 
 //import { Layout } from 'antd';
-//const { Header, Content, Footer } = Layout;
-const { Header , Footer } = Layout;
+const { Header, Footer } = Layout;
 
 
 
@@ -32,17 +32,18 @@ function App() {
             <Header>
               <AppHeader/>
             </Header>
-            <Routes>
-              <Route path='/' element={<AppHome/>}/>
-              <Route path='/hero' element={<AppHero/>}/>
-              <Route path='/contact' element={<AppContact/>} target="_blank"/>
-              <Route path='/influenceurs' element={<AppInfluenceurs/>}/>
-              <Route path='/about' element={<AppAbout/>}/>
-              <Route path='/partner' element={<AppPartenaires/>}/>
-            </Routes>
+              <Routes>
+                <Route path='/' element={<AppHome/>}/>
+                <Route path='/first' element={<AppFirst/>}/>
+                <Route path='/hero' element={<AppHero/>}/>
+                <Route path='/contact' element={<AppContact/>} target="_blank"/>
+                <Route path='/influenceurs' element={<AppInfluenceurs/>}/>
+                <Route path='/about' element={<AppAbout/>}/>
+                <Route path='/partenaires' element={<AppPartenaires/>}/>
+              </Routes>
             <Footer>
               <AppFooter/>  
-            </Footer> 
+            </Footer>
         </Layout>
       </BrowserRouter>
   );
