@@ -5,29 +5,30 @@ import mobile from './responsive';
 
 import image1 from '../../assets/images/photo23.jpg';
 import image2 from '../../assets/images/photo19.jpg';
-import image3 from '../../assets/images/photo22.jpg';
+import image3 from '../../assets/images/photo21.jpg';
 
 
 
 const Container = styled.div`
-  height: 100vh;
-  font-size: 1.5em;
-  text-align: center;
+  height: 100%;
+  color: white;
   margin-top: 40px;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #fcae07;
+  background-color: #000;
 `
 const Wrapper = styled.div`
 display: flex;
 margin: 5px;
 ${mobile({display: "flex", flexDirection:"column"})}
-background-color: #fcae07;
+/* background-color: #fcae07; */
 
 `
 
 const Left = styled.div`
 justify-content: flex-start;
+margin-left: 20px;
+padding-left: 20px;
 
 `
 const Right = styled.div`
@@ -51,10 +52,11 @@ text-transform: uppercase;
 `
 
 const Hr = styled.hr`
-    background-color: #eee;
+    background-color: #fcae07;
+    border-radius: 5px;
     border: none;
-    height: 2px;
-    width: 25%;
+    height: 5px;
+    width: 40%;
 `
 
 const Body = styled.div`
@@ -68,18 +70,32 @@ margin: 10px;
 `
 const Footer = styled.div`
 background-color: black ;
+height: 25vh;
+`
+
+const  Amos = styled.div`
+margin: 20px;
+padding: 20px;
 
 `
 
-// const  BR = styled.div`
-// `
+
 const  Image = styled.img`
-height: 70vh;
+height: 100vh;
 width: 100vh;
 float: right;
+border-radius: 5px;
 `
-const Item1 = styled.p`
-display: left;
+
+const BR = styled.br`
+
+`
+
+const Item1 = styled.div`
+color: #fcae07;
+font-size: 60px;
+font-weight: 1000;
+text-transform: uppercase;
 `
 const Item2 = styled.div`
 
@@ -87,10 +103,12 @@ const Item2 = styled.div`
 const Item3 = styled.div`
 justify-content: start;
 `
+const Item4 = styled.span`
+`
 
 const SmallImage = styled.img`
 margin: 5px;
-height: 34vh;
+height: 50vh;
 width: 28vh;
 border-radius: 20px;
 `
@@ -112,9 +130,15 @@ const AppFirst = () => {
         <Body>
           <BL>
             <Item2>
-            <Item1>Amos Tina Nfon</Item1>
-            <Item1>Duis sint proident est elit in. Quis aliquip id commodo pariatur ex irure dolor amet. Dolore id minim elit ullamco veniam. Mollit nisi laboris id qui incididunt sint cupidatat fugiat. Lorem minim duis officia laboris veniam nostrud duis id. Qui pariatur eu quis exercitation eiusmod excepteur sit tempor elit.
-</Item1>
+              <Amos>
+              <Item1>Amos</Item1>
+              <Item1>Nfon Amos</Item1>
+            <Item4>Duis sint proident est elit in. Quis aliquip id commodo pariatur ex irure dolor amet.
+               Dolore id minim elit ullamco veniam. Mollit nisi laboris id qui incididunt sint cupidatat fugiat. 
+               Lorem minim duis officia laboris veniam 
+              nostrud duis id. Qui pariatur eu quis exercitation eiusmod excepteur sit tempor elit.  
+            </Item4>
+            </Amos>
             <Item3>
             <SmallImage src={image1}/>
             <SmallImage src={image2}/>
@@ -124,7 +148,7 @@ const AppFirst = () => {
             <Image src="https://i.ytimg.com/vi/Rwxq-oS1yG4/maxresdefault.jpg"/>
           </BL>
         </Body>
-        <Footer></Footer>
+        <Hr/>
     </Container>
   )
 }
@@ -132,71 +156,3 @@ const AppFirst = () => {
 export default AppFirst;
 
 
-// const Container = styled.div`
-// padding-top: 20px;
-// margin-top: 40px;
-// height: 100vh;
-// background-color: #fcae07;
-// `
-
-// const Wrapper = styled.div`
-//   display: flex;
-//   margin-top: 10px;
-//   padding-top: 10px;
-//   ${mobile({display: "flex", flexDirection:"column"})}
-// `
-
-// const Right = styled.div`
-//   flex:1;
-// `
-// const Left = styled.div`
-//   flex: 1;
-// `
-
-// const Image = styled.img`
-// width: 100vh;
-// `
-// const One = styled.p`
-
-// `
-
-// const Two = styled.div`
-  
-// `
-
-// const Three = styled.div`
-// `
-
-// const SmallImage = styled.img`
-// width: 20vh;
-// margin: 5px;
-// border-radius: 5px;
-// `
-
-
-// const AppFirst = () => {
-//   return (
-//     <Container>
-//       <Wrapper>
-//         <Left>
-//           @The_Process
-//           <One>Amos TINA NFON</One>
-//           <Two>Lorem fugiat ad est dolore quis aliquip deserunt mollit elit quis dolore Lorem magna. Ex cupidatat reprehenderit elit quis incididunt duis duis consectetur veniam fugiat fugiat aliqua ut non. Ad eiusmod sit Lorem non voluptate consequat esse ea ad cupidatat fugiat mollit et anim.
-
-// Pariatur sit est commodo adipisicing nisi est dolor aliquip commodo incididunt ad. Ipsum culpa excepteur eiusmod sit esse sunt officia irure commodo elit Lorem. Ipsum dolore aliquip nisi commodo pariatur cupidatat culpa aliqua Lorem proident.</Two>
-//         <Three>
-//           <SmallImage src={image1}/> 
-//           <SmallImage src={image2}/> 
-//           <SmallImage src={image3}/> 
-//         </Three>
-//         </Left>
-//         <Right>
-//           <Image src="https://www.freepsdbazaar.com/wp-content/uploads/2020/06/sky-replace/sky-rain/rain-10-freepsdbazaar.jpg"/>
-//         </Right>
-//       </Wrapper>
-//     </Container>
-//   )
-// }
-
-
-//export default AppFirst;

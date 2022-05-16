@@ -43,9 +43,9 @@ function App() {
                 <Route path='/partenaires' element={<AppPartenaires/>}/>
               </Routes>
             </Content>
-            <Footer>
+            {/* <Footer>
               <AppFooter/>  
-            </Footer>
+            </Footer> */}
         </Layout>
       </BrowserRouter>
   );
