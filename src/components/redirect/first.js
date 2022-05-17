@@ -13,24 +13,27 @@ const Container = styled.div`
   height: 100%;
   color: white;
   margin-top: 40px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  padding-right: 10px;
   background-color: #000;
 `
 const Wrapper = styled.div`
 display: flex;
-margin: 5px;
+padding: 10px;
 ${mobile({display: "flex", flexDirection:"column"})}
 /* background-color: #fcae07; */
 
 `
 
-const Left = styled.div`
-justify-content: flex-start;
-margin-left: 20px;
-padding-left: 20px;
+// const Left = styled.div`
+// margin-left: 20px;
+// padding-left: 20px;
+// font-size: 20px;
+// font-weight: 600  ;
+// text-transform: uppercase                                                                                                                                                                                                                                                                                                                                                       0px;
+// `
 
-`
 const Right = styled.div`
 flex: 1;
 display: flex;
@@ -51,27 +54,34 @@ text-transform: uppercase;
 /* ${mobile({display: "none"})} */
 `
 
-const Hr = styled.hr`
+const Hr1 = styled.hr`
+    background-color: #fcae07;
+    border-radius: 5px;
+    border: none;
+    height: 3px;
+    width: 30px;
+    margin: 0px;
+`
+
+const Hr2 = styled.hr`
     background-color: #fcae07;
     border-radius: 5px;
     border: none;
     height: 5px;
-    width: 40%;
+    width: 25%;
+    margin-top: 0px;
+    padding-top: 0px;
 `
 
 const Body = styled.div`
 margin-bottom: 50px;
-padding-bottom: 50px;
 `
 
 const  BL = styled.div`
 display: flex;
 margin: 10px;
 `
-const Footer = styled.div`
-background-color: black ;
-height: 25vh;
-`
+
 
 const  Amos = styled.div`
 margin: 20px;
@@ -81,20 +91,24 @@ padding: 20px;
 
 
 const  Image = styled.img`
-height: 100vh;
-width: 100vh;
-float: right;
-border-radius: 5px;
+width: 100%;
+border-radius: 15px;
 `
 
 const BR = styled.br`
-
 `
 
 const Item1 = styled.div`
+line-height: 1em;
+word-spacing: 0.25em;
+margin-bottom: 30px;
+padding-bottom: 20px;
+margin-top: -50px;
+padding-top: -20px;
 color: #fcae07;
-font-size: 60px;
-font-weight: 1000;
+font-size: 50px;
+width: 90%;
+font-weight: 600;
 text-transform: uppercase;
 `
 const Item2 = styled.div`
@@ -103,24 +117,28 @@ const Item2 = styled.div`
 const Item3 = styled.div`
 justify-content: start;
 `
-const Item4 = styled.span`
+const Item4 = styled.div`
+width: 70%;
 `
 
 const SmallImage = styled.img`
 margin: 5px;
 height: 50vh;
-width: 28vh;
+width: 25%;
 border-radius: 20px;
+`
+const Footer = styled.div`
+background-color: black ;
 `
 
 const AppFirst = () => {
   return (
     <Container>
         <Wrapper>
-          <Left>
+          <MenuItem>
             @Zacharia
-            <Hr/>
-          </Left>
+            <Hr1/>
+          </MenuItem>
           <Right>
             <MenuItem>Menu</MenuItem>
             <MenuItem>styled</MenuItem>
@@ -131,8 +149,7 @@ const AppFirst = () => {
           <BL>
             <Item2>
               <Amos>
-              <Item1>Amos</Item1>
-              <Item1>Nfon Amos</Item1>
+              <Item1>TINA NFON <BR/>Amos</Item1>
             <Item4>Duis sint proident est elit in. Quis aliquip id commodo pariatur ex irure dolor amet.
                Dolore id minim elit ullamco veniam. Mollit nisi laboris id qui incididunt sint cupidatat fugiat. 
                Lorem minim duis officia laboris veniam 
@@ -145,10 +162,11 @@ const AppFirst = () => {
             <SmallImage src={image3}/>
             </Item3>
             </Item2>
-            <Image src="https://i.ytimg.com/vi/Rwxq-oS1yG4/maxresdefault.jpg"/>
+            <Image src="https://mocah.org/thumbs/4584401-women-closed-eyes-bare-shoulders-face-neon-purple-background-body-paint-colorful.jpg"/>
           </BL>
         </Body>
-        <Hr/>
+        <Hr2/>
+        <Footer></Footer>
     </Container>
   )
 }

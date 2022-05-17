@@ -31,21 +31,13 @@ function AppHeader() {
         </div>
         <div className="mobileHidden">
           <Anchor targetOffset="65">
-            <Linked to="/" element={<AppHero/>}>
-              <Link href="#hero" title="Accueil"/>
+            <Linked to="/">
+            <Link href="#hero" title="Accueil"/>
             </Linked>
-            <Linked to="/about" element={<AppAbout/>}>
               <Link href="#about" title="Qui sommes-nous"/>
-            </Linked>
-            <Linked to="/influenceurs" element={<AppInfluenceurs/>}>
               <Link href="#influenceurs" title="Influenceurs"/>
-            </Linked>
-            <Linked to="/partenaires" element={<AppPartenaires/>}>
               <Link href="#partenaires" title="Partenaires"/>
-            </Linked>
-            <Linked to="/contact" element={<AppContact/>}>
-              <Link href="#contact" title="Contact"/>
-            </Linked>
+              <Link href="#contact" title="Contact"/> 
           </Anchor>
         </div>
         <div className="mobileVisible">

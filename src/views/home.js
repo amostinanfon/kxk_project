@@ -6,7 +6,7 @@ import AppInfluenceurs from '../components/home/influenceurs';
 import AppContact from '../components/home/contact';
 import AppPartenaires from '../components/home/partenaires';
 import AppHeader from "../components/common/header";
-//import AppFooter from "../components/common/footer";
+import AppFooter from "../components/common/footer";
  
 
 
@@ -21,7 +21,7 @@ function AppHome() {
       <AppInfluenceurs/>
       <AppPartenaires/>
       <AppContact/>
-      {/* <AppFooter/> */}
+      <AppFooter/>
     </div>
   );
 }

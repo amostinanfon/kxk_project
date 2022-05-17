@@ -9,13 +9,8 @@ import {
 } from "react-router-dom";
 import AppHeader from './components/common/header';
 import AppFooter from './components/common/footer';
-import AppHome from './views/home';
 
-import AppHero from './components/home/hero';
-import AppAbout from './components/home/about';
-import AppInfluenceurs from './components/home/influenceurs';
-import AppContact from './components/home/contact';
-import AppPartenaires from './components/home/partenaires';
+import AppHome from './views/home'
 import AppFirst from './components/redirect/first';
 import { Layout } from 'antd';
 
@@ -35,17 +30,12 @@ function App() {
             <Content>
               <Routes>
                 <Route path='/' element={<AppHome/>}/>
-                <Route path='/first' element={<AppFirst/>}/>
-                <Route path='/hero' element={<AppHero/>}/>
-                <Route path='/contact' element={<AppContact/>} target="_blank"/>
-                <Route path='/influenceurs' element={<AppInfluenceurs/>}/>
-                <Route path='/about' element={<AppAbout/>}/>
-                <Route path='/partenaires' element={<AppPartenaires/>}/>
+                <Route path='/first' element={<AppFirst/>} target='_blank'/>
               </Routes>
             </Content>
-            {/* <Footer>
+            <Footer>
               <AppFooter/>  
-            </Footer> */}
+            </Footer> 
         </Layout>
       </BrowserRouter>
   );
