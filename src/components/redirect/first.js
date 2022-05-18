@@ -10,7 +10,6 @@ import image3 from '../../assets/images/photo21.jpg';
 
 
 const Container = styled.div`
-  height: 100%;
   color: white;
   margin-top: 40px;
   padding-top: 30px;
@@ -37,9 +36,10 @@ ${mobile({display: "flex", flexDirection:"column"})}
 const Right = styled.div`
 flex: 1;
 display: flex;
-justify-content: flex-end;
-margin-right: 40px;
-padding-right: 40px;
+align-items: center;
+justify-content: center;
+margin-left: 20px;
+padding-left: 20px;
 ${mobile({display: "none"})}
 
 `
@@ -91,8 +91,8 @@ padding: 20px;
 
 
 const  Image = styled.img`
-width: 100%;
 border-radius: 15px;
+width: 125%;
 `
 
 const BR = styled.br`
@@ -116,6 +116,7 @@ const Item2 = styled.div`
 `
 const Item3 = styled.div`
 justify-content: start;
+height: 50%;
 `
 const Item4 = styled.div`
 width: 70%;
@@ -162,8 +163,8 @@ const AppFirst = () => {
             <SmallImage src={image3}/>
             </Item3>
             </Item2>
-            <Image src="https://mocah.org/thumbs/4584401-women-closed-eyes-bare-shoulders-face-neon-purple-background-body-paint-colorful.jpg"/>
-          </BL>
+              <Image src="https://mocah.org/thumbs/4584401-women-closed-eyes-bare-shoulders-face-neon-purple-background-body-paint-colorful.jpg"/>
+           </BL>
         </Body>
         <Hr2/>
         <Footer></Footer>

@@ -4,11 +4,11 @@ import { Link as Linked } from 'react-router-dom';
 import { Anchor, Drawer, Button , Image } from 'antd';
 import image3 from '../../assets/images/kxk.jpg';
 
-import AppHero from '../home/hero';
-import AppAbout from '../home/about';
-import AppInfluenceurs from '../home/influenceurs';
-import AppContact from '../home/contact';
-import AppPartenaires from '../home/partenaires';
+// import AppHero from '../home/hero';
+// import AppAbout from '../home/about';
+// import AppInfluenceurs from '../home/influenceurs';
+// import AppContact from '../home/contact';
+// import AppPartenaires from '../home/partenaires';
 
 const { Link } = Anchor;
 
@@ -32,7 +32,7 @@ function AppHeader() {
         <div className="mobileHidden">
           <Anchor targetOffset="65">
             <Linked to="/">
-            <Link href="#hero" title="Accueil"/>
+              <Link href="#hero" title="Accueil"/>
             </Linked>
               <Link href="#about" title="Qui sommes-nous"/>
               <Link href="#influenceurs" title="Influenceurs"/>

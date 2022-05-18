@@ -13,6 +13,7 @@ import AppFooter from './components/common/footer';
 import AppHome from './views/home'
 import AppFirst from './components/redirect/first';
 import { Layout } from 'antd';
+import AppAbout from './components/home/about';
 
 //import { Layout } from 'antd';
 const { Header, Content , Footer } = Layout;
@@ -30,7 +31,8 @@ function App() {
             <Content>
               <Routes>
                 <Route path='/' element={<AppHome/>}/>
-                <Route path='/first' element={<AppFirst/>} target='_blank'/>
+                <Route path='/first' element={<AppFirst/>}/>
+                <Route path='/about' element={<AppAbout/>}/>
               </Routes>
             </Content>
             <Footer>
