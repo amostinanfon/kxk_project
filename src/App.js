@@ -31,7 +31,7 @@ function App() {
             <Content>
               <Routes>
                 <Route path='/' element={<AppHome/>}/>
-                <Route path='https://amostinanfon.github.io/kxk_project/' element={<AppHome/>}/>
+                <Route path='*' element={<AppHome/>}/>
                 <Route path='/first' element={<AppFirst/>}/>
                 <Route path='/about' element={<AppAbout/>}/>
               </Routes>
