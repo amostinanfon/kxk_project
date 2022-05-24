@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.less';
+import Success from "./components/redirect/success";
 //import 'antd/dist/antd.css';
 
 import {
@@ -32,6 +33,7 @@ function App() {
               <Routes>
                 <Route path='/' element={<AppHome/>}/>
                 <Route path='*' element={<AppHome/>}/>
+                <Route path="/success" element={<Success/>} />
                 <Route path='/first' element={<AppFirst/>}/>
                 <Route path='/about' element={<AppAbout/>}/>
               </Routes>
@@ -43,5 +45,7 @@ function App() {
       </BrowserRouter>
   );
 }
+
+
 
 export default App;

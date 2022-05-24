@@ -1,5 +1,6 @@
-import React , {  useState } from 'react';
+import React , {  useState , useEffect} from 'react';
 import emailjs from '@emailjs/browser';
+import { useNavigate } from 'react-router-dom';
 //import instance from '../../firebase/instance';
 
 
@@ -65,7 +66,7 @@ const handleInstagram = (e) => {
 
 
 const postDataHandler = (e) => {
-  //e.preventDefault();
+  e.preventDefault();
   axios.post('https://kxk-projet-default-rtdb.firebaseio.com/data.json', 
         {name , email , instagram , sujet , message})
         .then(response => console.log(response));
