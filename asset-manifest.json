@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/kxk_project/static/css/main.5e00e490.css",
+    "main.js": "/kxk_project/static/js/main.7ac2e0fc.js",
+    "static/media/bg5.jpg": "/kxk_project/static/media/bg5.c1043aea377b7509989a.jpg",
+    "static/media/photo25.jpg": "/kxk_project/static/media/photo25.40e95a1dd62c87edb6a2.jpg",
+    "static/media/photo16.jpg": "/kxk_project/static/media/photo16.d794db46bacf28fd9f76.jpg",
+    "static/media/photo23.jpg": "/kxk_project/static/media/photo23.9acfc6a97643ff0effb0.jpg",
+    "static/media/photo15.jpg": "/kxk_project/static/media/photo15.206430bb945c8688dd86.jpg",
+    "static/media/photo19.jpg": "/kxk_project/static/media/photo19.e23045164670cc06ccfb.jpg",
+    "static/media/photo21.jpg": "/kxk_project/static/media/photo21.96038b53da667e2788c1.jpg",
+    "static/media/kxk.jpg": "/kxk_project/static/media/kxk.e85f8f1ffd01412ef992.jpg",
+    "index.html": "/kxk_project/index.html",
+    "main.5e00e490.css.map": "/kxk_project/static/css/main.5e00e490.css.map",
+    "main.7ac2e0fc.js.map": "/kxk_project/static/js/main.7ac2e0fc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e00e490.css",
+    "static/js/main.7ac2e0fc.js"
+  ]
+}
