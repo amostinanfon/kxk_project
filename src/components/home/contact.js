@@ -1,110 +1,95 @@
-import React , {  useState , useEffect} from 'react';
-import emailjs from '@emailjs/browser';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { useNavigate } from "react-router-dom";
 //import instance from '../../firebase/instance';
 
-
-import { Form, Input, Button, Checkbox  } from 'antd';
-import axios from 'axios';
-
+import { Form, Input, Button, Checkbox } from "antd";
+import axios from "axios";
 
 const { TextArea } = Input;
 
-
-
 function AppContact() {
-
-  //const form = useRef()
-  
   const [form] = Form.useForm();
-  
+
+  // Function to reset FormField
   const onReset = () => {
-    form.resetFields()
-  }
+    form.resetFields();
+  };
 
   const tailLayout = {
     wrapperCol: { offset: 8, span: 16 },
   };
 
+  // Using Hook to 
+  let [name, setName] = useState("");
+  let [email, setEmail] = useState("");
+  let [instagram, setInstagram] = useState("");
+  let [sujet, setSujet] = useState("");
+  let [message, setMessage] = useState("");
 
-let [name , setName] = useState('')
-let [email , setEmail] = useState('')
-let [instagram , setInstagram] = useState('')
-let [sujet , setSujet] = useState('')
-let [message , setMessage] = useState('')
+  const handleName = (e) => {
+    setName(e.target.value);
+    console.log(name);
+  };
 
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+    console.log(email);
+  };
 
-const handleName = (e) => {
-  setName(e.target.value)
-  console.log(name)
-}
+  const handleSujet = (e) => {
+    setSujet(e.target.value);
+    console.log(sujet);
+  };
 
-const handleEmail= (e) => {
-  setEmail(e.target.value)
-  console.log(email)
+  const handleMessage = (e) => {
+    setMessage(e.target.value);
+    console.log(message);
+  };
 
-}
+  const handleInstagram = (e) => {
+    setInstagram(e.target.value);
+    console.log(instagram);
+  };
 
-const handleSujet = (e) => {
-  setSujet(e.target.value)
-  console.log(sujet)
+  let navigate = useNavigate();
 
-}
+  const PostDataHandler = async () => {
+    await axios
+      .post("https://kxk-projet-default-rtdb.firebaseio.com/data.json", {
+        name,
+        email,
+        instagram,
+        sujet,
+        message,
+      })
+      .then((response) => console.log(response));
+  };
 
+  const sendEmail = () => {
+    emailjs
+      .send(
+        "service_l8pcfwe",
+        "template_wr9q418",
+        { name, instagram, email, sujet, message },
+        "n3T_AxpcfCqmusW6y"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!!!", response.status, response.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
-const handleMessage = (e) => {
-  setMessage(e.target.value)
-  console.log(message)
-
-}
-
-const handleInstagram = (e) => {
-  setInstagram(e.target.value)
-  console.log(instagram)
-
-}
-
-
-const postDataHandler = (e) => {
-  e.preventDefault();
-  axios.post('https://kxk-projet-default-rtdb.firebaseio.com/data.json', 
-        {name , email , instagram , sujet , message})
-        .then(response => console.log(response));
-
-}
-
-
-  const sendEmail = (e) => {
-
-  
-    //e.preventDefault();
-
-      emailjs.send('service_l8pcfwe', 'template_wr9q418' , 
-                  {name, instagram, email, sujet, message }, 
-                  'n3T_AxpcfCqmusW6y')
-             .then((response) => {
-             console.log('SUCCESS!!!', response.status, response.text);
-            }, (error) => {
-                console.log(error.text);
-        });
-
-        form.resetFields();
-    }
-
-    /**useEffect(() => {
-      axios.get('https://kxk-projet-default-rtdb.firebaseio.com/data.json')
-           .then((response) => console.log(response.data))
-           .catch((error) => console.log(error.text))
-    }, []) */
-
-
-    /*const getDataHandler = (e) => {
-      axios.get('https://kxk-projet-default-rtdb.firebaseio.com/data.json')
-           .then((response) => console.group(response))
-           .catch(error =>console.log(error))
-    }*/
-
-    
+  // Function to post , submit and redirect to success page
+  const Finish = (values) => {
+    sendEmail({ values });
+    PostDataHandler();
+    navigate("/success");
+  };
 
   return (
     <div id="contact" className="block contactBlock">
@@ -114,24 +99,28 @@ const postDataHandler = (e) => {
           <p>Dolore nam rerum obcaecati fugit odio nobis Molestiae rerum</p>
         </div>
         <Form
-          autoComplete='off'
+          autoComplete="off"
           name="normal_login"
           className="login-form"
           form={form}
           initialValues={{ remember: true }}
-          onFinish = { (values) => sendEmail({values}) }
+          onFinish={Finish}
         >
           <Form.Item
             name="name"
             rules={[
-              { 
+              {
                 required: true,
-                message: 'Entrer votre nom et prenom' 
-              }]
-            }
+                message: "Entrer votre nom et prenom",
+              },
+            ]}
             hasFeedback
           >
-            <Input  value={name} onChange={handleName} placeholder="Nom et Prenom" />
+            <Input
+              value={name}
+              onChange={handleName}
+              placeholder="Nom et Prenom"
+            />
           </Form.Item>
           <Form.Item
             name="email"
@@ -142,42 +131,55 @@ const postDataHandler = (e) => {
               },
               {
                 required: true,
-                message: 'Entrez votre Adresse Email ICI !',
+                message: "Entrez votre Adresse Email ICI !",
               },
             ]}
             hasFeedback
           >
-            <Input value={email} onChange={handleEmail} placeholder="Adresse Email "/>
+            <Input
+              value={email}
+              onChange={handleEmail}
+              placeholder="Adresse Email "
+            />
           </Form.Item>
           <Form.Item
             name="telephone"
             rules={[
               {
                 required: true,
-                message: "Entrer votre numéro de téléphone"
-              }
+                message: "Entrer votre numéro de téléphone",
+              },
             ]}
             hasFeedback
           >
-            <Input  value={instagram} onChange={handleInstagram} placeholder="Compte Instagram" />
+            <Input
+              value={instagram}
+              onChange={handleInstagram}
+              placeholder="Compte Instagram"
+            />
           </Form.Item>
-          <Form.Item
-            name="sujet"
-          >
-            <Input  value={sujet} onChange={handleSujet} placeholder="Sujet" />
+          <Form.Item name="sujet">
+            <Input value={sujet} onChange={handleSujet} placeholder="Sujet" />
           </Form.Item>
-          <Form.Item
-            name="message"
-          >
-            <TextArea  value={message} onChange={handleMessage} placeholder="Message" />
+          <Form.Item name="message">
+            <TextArea
+              value={message}
+              onChange={handleMessage}
+              placeholder="Message"
+            />
           </Form.Item>
           <Form.Item>
-            <Form.Item 
-              name="remember" 
+            <Form.Item
+              name="remember"
               valuePropName="checked"
               noStyle
               rules={[
-                { validator:(_, value) => value ? Promise.resolve() : Promise.reject('Should accept agreement') },
+                {
+                  validator: (_, value) =>
+                    value
+                      ? Promise.resolve()
+                      : Promise.reject("Should accept agreement"),
+                },
               ]}
             >
               <Checkbox>J'accepte les conditions d'utilisation.</Checkbox>
@@ -185,12 +187,10 @@ const postDataHandler = (e) => {
           </Form.Item>
           <Form.Item {...tailLayout}>
             <Button
-                //onFinish={success}
-                //onFinish={postDataHandler && onReset }
-                onClick={ postDataHandler }
-                type="primary" 
-                htmlType="submit" 
-                className="login-form-button"
+              // onClick={PostDataHandler}
+              type="primary"
+              htmlType="submit"
+              className="login-form-button"
             >
               Envoyez !!!
             </Button>
@@ -200,9 +200,8 @@ const postDataHandler = (e) => {
           </Form.Item>
         </Form>
       </div>
-    </div>  
+    </div>
   );
 }
-
 
 export default AppContact;

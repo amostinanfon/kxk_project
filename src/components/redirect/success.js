@@ -32,7 +32,7 @@ export default function Success() {
                     fontWeight: '800'
                 }}
             >
-                <p style={{textTransform:"uppercase"}}>Effectuez avec succès</p>      
+                <p style={{textTransform:"uppercase"}}>Formulaire envoyé avec succès</p>      
             </button><br/>
     </div>
 
