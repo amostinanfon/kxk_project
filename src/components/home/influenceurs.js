@@ -25,7 +25,7 @@ function AppInfluenceurs() {
           <h2>KXK AGENCY</h2>
           <p>Lorem dddddddddddddddddddd</p>
         </div>
-        <Row gutter={[16, 16]}>
+        <Row gutter={[18, 18]}>
           <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
             <Link to="/first">
               <Card
@@ -57,7 +57,7 @@ function AppInfluenceurs() {
             </Link>
           </Col>
         </Row>
-        <Row gutter={[16, 16]}>
+        <Row gutter={[18, 18]}>
           <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
             <Link to="/first">
             <Card
