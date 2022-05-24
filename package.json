@@ -1,7 +1,7 @@
 {
   "name": "tech",
   "version": "0.1.0",
-  "homepage": "http://localhost:3000/kxk",
+  "homepage": "https://amostinanfon.github.io/kxk_project/",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.4.3",
