@@ -53,12 +53,8 @@ function AppHeader() {
             <Anchor targetOffset="65">
               <Linked to="/">
                 <Link href="#hero" title="Accueil"/>
-<<<<<<< HEAD
-              </Linked>              <Link href="#about" title="Qui sommes-nous" />
-=======
               </Linked>
               <Link href="#about" title="Qui sommes-nous" />
->>>>>>> main
               <Link href="#infleunceurs" title="influenceurs" />
               <Link href="#partenaires" title="Partenaires" />
               <Link href="#contact" title="Contact" />
