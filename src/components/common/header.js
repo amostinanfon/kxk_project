@@ -51,7 +51,9 @@ function AppHeader() {
             visible={visible}
           >
             <Anchor targetOffset="65">
-              <Link href="#hero" title="Accueil" />
+              <Linked to="/">
+                <Link href="#hero" title="Accueil"/>
+              </Linked>
               <Link href="#about" title="Qui sommes-nous" />
               <Link href="#infleunceurs" title="influenceurs" />
               <Link href="#partenaires" title="Partenaires" />
