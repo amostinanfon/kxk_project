@@ -13,6 +13,7 @@
     "axios": "^0.26.1",
     "craco-less": "^2.0.0",
     "firebase": "^9.6.10",
+    "gh-pages": "^4.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^6.3.0",
@@ -20,6 +21,8 @@
     "styled-components": "^5.3.5"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
