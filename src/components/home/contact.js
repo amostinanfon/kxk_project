@@ -11,6 +11,9 @@ const { TextArea } = Input;
 function AppContact() {
   const [form] = Form.useForm();
 
+
+
+
   // Function to reset FormField
   const onReset = () => {
     form.resetFields();
@@ -26,11 +29,17 @@ function AppContact() {
   let [instagram, setInstagram] = useState("");
   let [sujet, setSujet] = useState("");
   let [message, setMessage] = useState("");
+  //let [phone, setPhone] = useState("");
 
   const handleName = (e) => {
     setName(e.target.value);
     console.log(name);
   };
+
+  // const handlePhone = (e) => {
+  //   setPhone(e.target.value);
+  //   console.log(phone);                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+  // };
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -139,15 +148,15 @@ function AppContact() {
             <Input
               value={email}
               onChange={handleEmail}
-              placeholder="Adresse Email "
+              placeholder="Adresse Email"
             />
           </Form.Item>
           <Form.Item
-            name="telephone"
+            name="instagram"
             rules={[
               {
                 required: true,
-                message: "Entrer votre numéro de téléphone",
+                message: "Entrer votre compte Instagram",
               },
             ]}
             hasFeedback
@@ -187,14 +196,18 @@ function AppContact() {
           </Form.Item>
           <Form.Item {...tailLayout}>
             <Button
-              // onClick={PostDataHandler}
+              style={{margin: "10px", textTransform:"uppercase"}}
               type="primary"
               htmlType="submit"
               className="login-form-button"
             >
               Envoyez !!!
             </Button>
-            <Button htmlType="button" onClick={onReset}>
+            <Button
+              style={{margin: "10px", textTransform:"uppercase"}} 
+              htmlType="button" 
+              onClick={onReset}
+            >
               Effacer 🤨
             </Button>
           </Form.Item>
